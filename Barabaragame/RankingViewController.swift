@@ -9,9 +9,21 @@
 import UIKit
 
 class RankingViewController: UIViewController {
+    
+    @IBOutlet var rankingLabel1: UILabel! //一位のスコアを表示するラベル
+    @IBOutlet var rankingLabel2: UILabel! //2位のスコアry
+    @IBOutlet var rankingLabel3: UILabel! //3位のスコアry
+    
+    let defaults: UserDefaults = UserDefaults.standard //スコアを保存するための変数
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //"score1"というキーの値を取得して表示
+        rankingLabel1.text = String(defaults.integer(forKey: "score1"))
+        //"score2"というキーの値を取得して表示
+        rankingLabel2.text = String(defaults.integer(forKey: "score2"))
+        //"score3"というキーの値を取得して表示
+        rankingLabel3.text = String(defaults.integer(forKey: "score3"))
+        //super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }

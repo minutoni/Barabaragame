@@ -69,21 +69,20 @@
                                 <rect key="frame" x="20" y="20" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="topへ"/>
+                                <connections>
+                                    <action selector="toTop" destination="FI9-Rj-fI5" eventType="touchUpInside" id="V3k-jf-uTF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-1r-Xvz">
                                 <rect key="frame" x="297" y="20" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="リトライ"/>
+                                <connections>
+                                    <action selector="retry" destination="FI9-Rj-fI5" eventType="touchUpInside" id="du1-zK-TCz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-zN-myb">
                                 <rect key="frame" x="153" y="451" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNJ-1S-LXU">
-                                <rect key="frame" x="170" y="509" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -109,10 +108,24 @@
                                 <rect key="frame" x="153" y="305" width="46" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxb-Mv-hVg">
+                                <rect key="frame" x="161" y="520" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop" destination="FI9-Rj-fI5" eventType="touchUpInside" id="Zhb-fX-ogZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cDt-gw-wQu"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView1" destination="3oK-Cu-r35" id="Xgb-mE-ldx"/>
+                        <outlet property="imgView2" destination="z6B-W4-GFc" id="Ssr-Ic-Ssr"/>
+                        <outlet property="imgView3" destination="Khw-65-4nl" id="Vjg-3M-Xce"/>
+                        <outlet property="resultLabel" destination="fJg-zN-myb" id="826-66-OCF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kiw-qh-yas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
