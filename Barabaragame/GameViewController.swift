@@ -100,7 +100,7 @@ class GameViewController: UIViewController {
         score = 1000 //すこあの値をリセットする
         positionX = [width/2,width/2,width/2] //画像を真ん中の位置に戻す
         if timer.isValid == false {
-            self.start()  //スタートメソッドを呼び出す
+            self.start() //スタートメソッドを呼び出す
         }
     }
     

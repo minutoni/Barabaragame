@@ -192,11 +192,19 @@
                                 <rect key="frame" x="151" y="559" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Topへ戻る"/>
+                                <connections>
+                                    <action selector="toTop" destination="wRk-NU-AIA" eventType="touchUpInside" id="OyX-3Y-n7C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="A8G-jN-l61"/>
                     </view>
+                    <connections>
+                        <outlet property="rankingLabel1" destination="FxE-hT-pwa" id="O9W-3d-mKc"/>
+                        <outlet property="rankingLabel2" destination="SG9-P0-ZS2" id="Cj8-1l-gL8"/>
+                        <outlet property="rankingLabel3" destination="wF5-16-50L" id="QuG-UW-ANm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tu3-IC-wee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
