@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
     
     var dx: [CGFloat] = [1.0,0.5,-1.0] //画面を動かす幅の配列
     
-    func up(){
+    @objc func up(){
         for i in 0..<3 {
             //橋に来たら動かす向きを逆にする
             if positionX[i] > width || positionX[i] < 0 {
@@ -42,6 +42,7 @@ class GameViewController: UIViewController {
         imgView3.center.x = positionX[2] //下の画像をずらした位置に移動させる
         
         
+    }
         func start(){
             //結果ラベルを見えなくする
             resultLabel.isHidden = true
@@ -55,7 +56,6 @@ class GameViewController: UIViewController {
             
             
         }
-    }
     
     
 
@@ -74,6 +74,10 @@ class GameViewController: UIViewController {
     @IBAction func stop(){
         if timer.isValid == true{ //もしタイマーが動いていたら
             timer.invalidate()//タイマーを止める(無効にする)
+        }
+        
+        for i in 0..<3 {
+            score = score - abs(Int(width/2 - positionX[i]))*2 //スコアの計算をする
         }
         resultLabel.text = "Score : " + String(score) //結果ラベルにスコアを表示する
         resultLabel.isHidden = false //結果ラベルを隠さない(表す)
